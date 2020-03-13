@@ -1,1 +1,95 @@
-<p>edit-receta works!</p>
+<app-navbar [submitSurveyData]="submitSurveyData" [myForm]="myForm" [save]="save">
+</app-navbar>
+<div class="app">
+    <form autocomplete="off" [formGroup]="myForm" (ngSubmit)="submitSurveyData()">
+    <section>
+        <div class="page">
+            <div class="inner">
+                <div class="row">
+                    <div class="col s3">
+                        <img src="assets/logo.jpeg" alt="" style="width: 100% !important;">
+                    </div>
+                    <div class="col s9 center-align">
+                        <h5>Atención Odontológica Integral</h5>
+                        <h5>Dra. Perla Avisaac Pimienta Rodríguez</h5>
+                        <h6>UMSNH Ced. Prof. 3565669 IDAP Ced. Exp. 6442117</h6>
+                        <h6>Loma Grande #640 Col. Lomas del Valle. Tel. 2 99 71 81</h6>
+                    </div>
+                </div><br>
+                <div class="row">
+                    <div class="col s1">
+                        Nombre:
+                    </div>
+                    <div class="col s7">
+                        <input type="text" formControlName="nombre" autofocus  tabindex="0" class="focusNext">
+                    </div>
+                    <div class="col s1">
+                        Folio:
+                    </div>
+                    <div class="col s3">
+                        <input type="number" formControlName="folio" tabindex="1" class="focusNext">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s1">
+                        Domicilio:
+                    </div>
+                    <div class="col s11">
+                        <input type="text" formControlName="domicilio" tabindex="2" class="focusNext">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s1">
+                        Edad:
+                    </div>
+                    <div class="col s3">
+                        <input type="number" formControlName="edad" tabindex="3" class="focusNext">
+                    </div>
+                    <div class="col s1">
+                        Teléfono:
+                    </div>
+                    <div class="col s3">
+                        <input type="text" formControlName="tel" tabindex="4" class="focusNext">
+                    </div>
+                    <div class="col s1">
+                        Fecha:
+                    </div>
+                    <div class="col s3">
+                        <input type="date" formControlName="fecha">
+                    </div>
+                </div>
+                <br>
+                <br>
+                <div class="row">
+                    <div class="col s12">
+                        Rp.
+                    </div>
+                </div>
+                <div class="row">                        
+                    <div class="col s12">
+                        <textarea rows="6" formControlName="rp" tabindex="5" class="focusNext"></textarea>
+                    </div>
+                </div>   
+
+                <div class="footer__">
+                    <div class="signature">
+                        <div id="contSign" onclick="btn_click()">
+                          <img src="{{myForm.value.firma}}" id="imgSign" (load)="imgChanged($event)">
+                        </div>
+                        <hr>
+                        <p style="font-weight: 600;">
+                          FIRMA
+                        </p>
+          
+                      </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    </form>
+    <div class="no-print" id="printBtn" onclick="window.print()">
+        <img src="assets/print.svg" alt="" width="65" height="65">
+      </div>
+</div>
+

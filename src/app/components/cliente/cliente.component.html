@@ -1,0 +1,63 @@
+<app-navbar>
+</app-navbar>
+<div class="container">
+    <div class="row">
+        <div class="col s12 center-align">
+            <h5>Expediente con folio: {{client.orden}}</h5>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12 m3 center-align" style="cursor: pointer;" [routerLink]="['/edit-receta/', key]">
+            <div class="card">
+                <span class="card-title">Receta</span>
+                <div class="card-content">
+                    <div class="row">
+                        <h6>{{client.nombre}}</h6>
+                    </div>
+                </div>
+                <div class="card-action">
+                    <img src="assets/logo.jpeg" alt="" style="width: 100% !important;">
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m3 center-align" style="cursor: pointer;" [routerLink]="['/edit-historia/', key]">
+            <div class="card">
+                <span class="card-title">Historia Clínica</span>
+                <div class="card-content">
+                    <div class="row">
+                        <h6>{{client.nombre}}</h6>
+                    </div>
+                </div>
+                <div class="card-action">
+                    <img src="assets/logo.jpeg" alt="" style="width: 100% !important;">
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m3 center-align" style="cursor: pointer;" [routerLink]="['/edit-expedi/', key]">
+            <div class="card">
+                <span class="card-title">Expediente Clínico</span>
+                <div class="card-content">
+                    <div class="row">
+                        <h6>{{client.nombre}}</h6>
+                    </div>
+                </div>
+                <div class="card-action">
+                    <img src="assets/logo.jpeg" alt="" style="width: 100% !important;">
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m3 center-align" style="cursor: pointer;" [routerLink]="['/edit-carnet/', key]">
+            <div class="card">
+                <span class="card-title">Carnet de Citas</span>
+                <div class="card-content">
+                    <div class="row">
+                        <h6>{{client.nombre}}</h6>
+                    </div>
+                </div>
+                <div class="card-action">
+                    <img src="assets/logo.jpeg" alt="" style="width: 100% !important;">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

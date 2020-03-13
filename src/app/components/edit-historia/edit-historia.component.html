@@ -1,1 +1,667 @@
-<p>edit-historia works!</p>
+<app-navbar [submitSurveyData]="submitSurveyData" [myForm]="myForm" [save]="save">
+</app-navbar>
+<div class="app">
+    <form autocomplete="off" [formGroup]="myForm" (ngSubmit)="submitSurveyData()">
+    <section>
+        <div class="page">
+            <div class="inner">
+                <div class="row">
+                    <div class="col s3">
+                        <img src="assets/logo.jpeg" alt="" style="width: 100% !important;">
+                    </div>
+                    <div class="col s9 center-align">
+                        <h5>Atención Odontológica Integral</h5>
+                        <h5>Dra. Perla Avisaac Pimienta Rodríguez</h5>
+                        <h6>UMSNH Ced. Prof. 3565669 IDAP Ced. Exp. 6442117</h6>
+                        <h6>Loma Grande #640 Col. Lomas del Valle. Tel. 2 99 71 81</h6>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s1">
+                        Nombre:
+                    </div>
+                    <div class="col s7">
+                        <input type="text" formControlName="nombre" class="focusNext" tabindex="0" autofocus>
+                    </div>
+                    <div class="col s1">
+                        Folio:
+                    </div>
+                    <div class="col s3">
+                        <input type="number" formControlName="folio" class="focusNext" tabindex="1">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s1">
+                        Domicilio:
+                    </div>
+                    <div class="col s11">
+                        <input type="text" formControlName="domicilio" class="focusNext" tabindex="2">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s1">
+                        Fecha:
+                    </div>
+                    <div class="col s5">
+                        <input type="date" formControlName="fecha">
+                    </div>
+                    <div class="col s1">
+                        Edad:
+                    </div>
+                    <div class="col s5">
+                        <input type="number" formControlName="edad" class="focusNext" tabindex="3">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s1">
+                        Ocupación:
+                    </div>
+                    <div class="col s7">
+                        <input type="text" formControlName="ocupacion" class="focusNext" tabindex="4">
+                    </div>
+                    <div class="col s2">
+                        Tel. Particular:
+                    </div>
+                    <div class="col s2">
+                        <input type="text" formControlName="telpar" class="focusNext" tabindex="5">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s2">
+                        Direc. Oficina:
+                    </div>
+                    <div class="col s6">
+                        <input type="text" formControlName="dirofi" class="focusNext" tabindex="6">
+                    </div>
+                    <div class="col s2">
+                        Tel. Oficina:
+                    </div>
+                    <div class="col s2">
+                        <input type="text" formControlName="telofi" class="focusNext" tabindex="7">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s4">
+                        Doctor o persona que lo recomienda:
+                    </div>
+                    <div class="col s8">
+                        <input type="text" formControlName="recomen" class="focusNext" tabindex="8">
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col s12">
+                        Todos los datos son confidenciales, su respuesta ayuda a realizar un tratamiento exclusivo y
+                        apropiado para usted.
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12">
+                        <table>
+                            <tr>
+                                <th>HISTORIA MEDICA</th>
+                                <th>SI</th>
+                                <th>NO</th>
+                            </tr>
+                            <tr>
+                                <td>1.- ¿Ha tenido cambios en su salud en este año?</td>
+                                <td><input type="radio" name="h1" value="si" formControlName="h1"></td>
+                                <td><input type="radio" name="h1" value="no" formControlName="h1"></td>
+                            </tr>
+                            <tr>
+                                <td>2.- ¿Recibe tratamiento medico actualmente?</td>
+                                <td><input type="radio" name="h2" value="si" formControlName="h2"></td>
+                                <td><input type="radio" name="h2" value="no" formControlName="h2"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">¿Cual es la causa? <input type="text" style="margin-bottom: 0;" formControlName="h2a"> </td>
+                            </tr>
+                            <tr>
+                                <td>3.- ¿Esta tomando algún medicamento?</td>
+                                <td><input type="radio" name="h3" value="si" formControlName="h3"></td>
+                                <td><input type="radio" name="h3" value="no" formControlName="h3"></td>
+                            </tr>
+                            <tr>
+                                <td>4.- ¿Es alérgico a Anestesia, penicilina u otro medicamento o alimento?</td>
+                                <td><input type="radio" name="h4" value="si" formControlName="h4"></td>
+                                <td><input type="radio" name="h4" value="no" formControlName="h4"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">Señale cual: <input type="text" style="margin-bottom: 0;" formControlName="h4a"> </td>
+                            </tr>
+                            <tr>
+                                <td>5.- ¿Ha tenido sangrado excesivo en alguna intervención o necesitado transfusión?
+                                </td>
+                                <td><input type="radio" name="h5" value="si" formControlName="h5"></td>
+                                <td><input type="radio" name="h5" value="no" formControlName="h5"></td>
+                            </tr>
+                            <tr>
+                                <td>6.- ¿Ha padecido desmayos o convulsiones?</td>
+                                <td><input type="radio" name="h6" value="si" formControlName="h6"></td>
+                                <td><input type="radio" name="h6" value="no" formControlName="h6"></td>
+                            </tr>
+                            <tr>
+                                <td>7.- ¿Ha tenido alguna enfermedad de las siguientes?</td>
+                                <td><input type="radio" name="h7" value="si" formControlName="h7"></td>
+                                <td><input type="radio" name="h7" value="no" formControlName="h7"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">
+                                    <div class="row">
+                                        <div class="col s2">
+                                            Presión alta
+                                            <input type="checkbox" formControlName="h7a">
+                                        </div>
+                                        <div class="col s3">
+                                            Fiebre reumática
+                                            <input type="checkbox" formControlName="h7b">
+                                        </div>
+                                        <div class="col s2">
+                                            Asma
+                                            <input type="checkbox" formControlName="h7c">
+                                        </div>
+                                        <div class="col s3">
+                                            Desórdenes nerviosos
+                                            <input type="checkbox" formControlName="h7d">
+                                        </div>
+                                        <div class="col s2">
+                                            Sida
+                                            <input type="checkbox" formControlName="h7e">
+                                        </div>
+                                    </div>
+                                    <div class="col s3">
+                                        Enfermedad Cardiáca
+                                        <input type="checkbox" formControlName="h7f">
+                                    </div>
+                                    <div class="col s3">
+                                        Enfermedad Renal
+                                        <input type="checkbox" formControlName="h7g">
+                                    </div>
+                                    <div class="col s2">
+                                        Diabetes
+                                        <input type="checkbox" formControlName="h7h">
+                                    </div>
+                                    <div class="col s2">
+                                        Hepatitis
+                                        <input type="checkbox" formControlName="h7i">
+                                    </div>
+                                    <div class="col s2">
+                                        Otra
+                                        <input type="checkbox" formControlName="h7j">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>8.- Pacientes Mujeres: ¿Esta usted embarazada?</td>
+                                <td><input type="radio" name="h8" value="si" formControlName="h8"></td>
+                                <td><input type="radio" name="h8" value="no" formControlName="h8"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">Mes: <input type="text" style="width: 20%;"  formControlName="h8a"> </td>
+                            </tr>
+                            <tr>
+                                <td>9.- ¿Haz recibido tratamientoendodontico antes?</td>
+                                <td><input type="radio" name="h9" value="si" formControlName="h9"></td>
+                                <td><input type="radio" name="h9" value="no" formControlName="h9"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="3">10.- Motivo de la consulta: <input type="text" style="width: 80%;" formControlName="h10"> </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12 center-align">
+                        <h6>CONSENTIMIENTO INFORMADO</h6>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12" style="text-align: justify;">
+                        He sido adecuadamente informado que el tratamiento endodontico esta dirigido a preservar un
+                        diente que de otro modo debía ser extraído. Aunque este tratamiento tiene un indice de éxito
+                        elevado, siguiente siendo un procedimiento biológico, por lo que no se puede garantizar un 100%
+                        de éxito, en ocasiones puede requerir un nuevo tratamiento, cirugía, o incluso la extracción. He
+                        sido informado que la restauración permanente (incrustación, corona, obturación) sera realizada
+                        por mi dentista habitual.
+                    </div>
+                </div>
+                <div class="footer__">
+                    <div class="signature">
+                        <div id="contSign" onclick="btn_click()">
+                          <img src="{{myForm.value.firma}}" id="imgSign" (load)="imgChanged($event)">
+                        </div>
+                        <hr>
+                        <p style="font-weight: 600;">
+                          FIRMA
+                        </p>
+          
+                      </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="page">
+            <div class="inner">
+                <div class="row">
+                    <div class="col s12">
+                        <table>
+                            <tr>
+                                <th colspan="5"><h6>DIAGNOSTICO Y PLAN DE TRATAMIENTO</h6></th>
+                            </tr>
+                            <tr>
+                                <td colspan="5">ANTECEDENTES</td>
+                            </tr>
+                            <tr>
+                                <td>Intacto <input type="checkbox" formControlName="da1"></td>
+                                <td>Caries <input type="checkbox" formControlName="da2"></td>
+                                <td>Restauración <input type="checkbox" formControlName="da3"></td>
+                                <td>Traumatismo <input type="checkbox" formControlName="da4"></td>
+                                <td>Tumentaccion <input type="checkbox" formControlName="da5"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">Tratamiento endodontico <input type="checkbox" formControlName="da6"></td>
+                                <td>Preparación cavitaria <input type="checkbox" formControlName="da7"></td>
+                                <td>Fistula <input type="checkbox" formControlName="da8"></td>
+                                <td>Dolor <input type="checkbox" formControlName="da9"></td>
+                            </tr>
+                        </table><br>
+                        <table>
+                            <tr>
+                                <td colspan="5">ESTADO ACTUAL</td>
+                            </tr>
+                            <tr>
+                                <td>Caries <input type="checkbox" formControlName="de1"></td>
+                                <td>Restauración Permanente <input type="checkbox" formControlName="de2"></td>
+                                <td>Bolsa p. <input type="checkbox" formControlName="de3"></td>
+                                <td>Restauración Temporal <input type="checkbox" formControlName="de4"></td>
+                                <td>Intacto <input type="checkbox" formControlName="de5"></td>
+                            </tr>
+                        </table><br>
+                        <table>
+                            <tr>
+                                <td colspan="5">INTERROGATORIO</td>
+                            </tr>
+                            <tr>
+                                <td>DOLOR:</td>
+                                <td>Provocado <input type="checkbox" formControlName="di1"></td>
+                                <td>Irradiado <input type="checkbox" formControlName="di2"></td>
+                                <td>Percusión <input type="checkbox" formControlName="di3"></td>
+                                <td>Frio <input type="checkbox" formControlName="di4"></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Calor<input type="checkbox" formControlName="di5"></td>
+                                <td>Espontaneo <input type="checkbox" formControlName="di6"></td>
+                                <td>Localizado <input type="checkbox" formControlName="di7"></td>
+                                <td>Palpación <input type="checkbox" formControlName="di8"></td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Continuo<input type="checkbox" formControlName="di9"></td>
+                                <td>Masticación <input type="checkbox" formControlName="di10"></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </table><br>
+                        <table>
+                            <tr>
+                                <td colspan="5">PRUEBAS DE DIAGNOSTICO</td>
+                            </tr>
+                            <tr>
+                                <td>Frio:</td>
+                                <td colspan="2">continua <input type="text" style="width: 70%;" formControlName="dp1"></td>                                
+                                <td>Percusión <input type="checkbox" formControlName="dp2"></td>
+                                <td>Vitalometro <input type="checkbox" formControlName="dp3"></td>
+                            </tr>
+                            <tr>
+                                <td>Calor:</td>
+                                <td colspan="2">continua <input type="text" style="width: 70%;" formControlName="dp4"></td>                                
+                                <td>Palpación <input type="checkbox" formControlName="dp5"></td>
+                                <td>Otras <input type="checkbox" formControlName="dp6"></td>
+                            </tr>
+                        </table><br>
+                        <table>
+                            <tr>
+                                <td colspan="5">RADIOGRAFIA</td>
+                            </tr>
+                            <tr>
+                                <td>Caries <input type="checkbox" formControlName="dr1"></td>
+                                <td>Restauración <input type="checkbox" formControlName="dr2"></td>
+                                <td>Fractura Coronaria <input type="checkbox" formControlName="dr3"></td>
+                                <td>Calcificacion cámara <input type="checkbox" formControlName="dr4"></td>
+                                <td>Ensanchamiento <input type="checkbox" formControlName="dr5"></td>
+                            </tr>
+                            <tr>
+                                <td>Ligamento periodontal <input type="checkbox" formControlName="dr6"></td>
+                                <td>Lesión periapical <input type="checkbox" formControlName="dr7"></td>
+                                <td>Reabsorcion externa <input type="checkbox" formControlName="dr8"></td>
+                                <td>O. condensante <input type="checkbox" formControlName="dr9"></td>
+                                <td>Reabsorcion interna <input type="checkbox" formControlName="dr10"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">Calcificacion de conductos <input type="checkbox" formControlName="dr11"></td>
+                                <td>Poste intraconducto <input type="checkbox" formControlName="dr12"></td>
+                                <td>Fractura radicula <input type="checkbox" formControlName="dr13"></td>
+                                <td>Curvatura radicular <input type="checkbox" formControlName="dr14"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">Tratamiento endodontico deficiente <input type="checkbox" formControlName="dr15"></td>
+                                <td>Perforación radicular <input type="checkbox" formControlName="dr16"></td>
+                                <td>Ápice abierto <input type="checkbox" formControlName="dr17"></td>
+                                <td></td>
+                            </tr>
+                        </table><br>
+                        <table>
+                            <tr>
+                                <td colspan="5">DIAGNOSTICO</td>
+                            </tr>
+                            <tr>
+                                <td>Reversible <input type="checkbox" formControlName="dd1"></td>
+                                <td>Irreversible vital <input type="checkbox" formControlName="dd2"></td>
+                                <td>Fractura Coronaria <input type="checkbox" formControlName="dd3"></td>
+                                <td>Fractura Radicular <input type="checkbox" formControlName="dd4"></td>
+                                <td>A.A.A <input type="checkbox" formControlName="dd5"></td>
+                            </tr>
+                            <tr>
+                                <td>No vital sin lesión <input type="checkbox" formControlName="dd6"></td>
+                                <td>No vital con lesión <input type="checkbox" formControlName="dd7"></td>
+                                <td>Fracaso endodontico <input type="checkbox" formControlName="dd8"></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </table><br>
+                        <table>
+                            <tr>
+                                <td colspan="5">TRATAMIENTO</td>
+                            </tr>
+                            <tr>
+                                <td>Eliminar la causa <input type="checkbox" formControlName="dt1"></td>
+                                <td>Biopulpectomia <input type="checkbox" formControlName="dt2"></td>
+                                <td>Apicogenesis <input type="checkbox" formControlName="dt3"></td>
+                                <td>Apexificacion <input type="checkbox" formControlName="dt4"></td>
+                                <td>Ferulizacion <input type="checkbox" formControlName="dt5"></td>
+                            </tr>
+                            <tr>
+                                <td>Necropulpectomia <input type="checkbox" formControlName="dt6"></td>
+                                <td>Evaluacion periodental <input type="checkbox" formControlName="dt7"></td>
+                                <td>Retratamiento <input type="checkbox" formControlName="dt8"></td>
+                                <td>Cirugia <input type="checkbox" formControlName="dt9"></td>
+                                <td>Blanqueamiento <input type="checkbox" formControlName="dt10"></td>
+                            </tr>
+                            <tr>
+                                <td>Observación <input type="checkbox" formControlName="dt11"></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </table><br>
+                        <table>
+                            <tr>
+                                <td colspan="5">PRONOSTICO</td>
+                            </tr>
+                            <tr>
+                                <td>Favorable -90% <input type="checkbox" formControlName="dpn1"></td>
+                                <td>Favorable 80-90% <input type="checkbox" formControlName="dpn2"></td>
+                                <td>Reservado <input type="checkbox" formControlName="dpn3"></td>
+                                <td>Desfavorable <input type="checkbox" formControlName="dpn4"></td>
+                                <td></td>
+                            </tr>
+                        </table><br>
+
+                    </div>
+                </div><br>
+                <div class="row">
+                    <div class="col s1">
+                        DIENTE:
+                    </div>
+                    <div class="col s3">
+                        <input type="text" formControlName="diente">
+                    </div>
+                    <div class="col s4"></div>
+                    <div class="col s1">
+                        FECHA:
+                    </div>
+                    <div class="col s3">
+                        <input type="date" formControlName="fecha2">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="page">
+            <div class="inner">
+                <div class="row">
+                    <div class="col s12" style="text-align: center;">
+                        <h6>PRACTICA INSTRUMENTACIÓN / OBTURACIÓN ROTATORIA</h6>
+                    </div>
+                    <div class="row">
+                        <div class="col s1">
+                            Nombre:
+                        </div>
+                        <div class="col s11">
+                            <input type="text" formControlName="nombre" class="focusNext" tabindex="10">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s1">
+                            Diente:
+                        </div>
+                        <div class="col s3">
+                            <input type="text" formControlName="diente2" class="focusNext" tabindex="11">
+                        </div>
+                        <div class="col s1">
+                            Grapa:
+                        </div>
+                        <div class="col s7">
+                            <input type="text" formControlName="grapa" class="focusNext" tabindex="12">
+                        </div>
+                    </div><br>
+                    <div class="row">
+                        <div class="col s3" style="text-align: center;">
+                            FECHA
+                        </div>
+                        <div class="col s9" style="text-align: center;">
+                            DESCRIPCIÓN
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s3" style="text-align: center;">
+                            <input type="date" formControlName="fechap1">
+                        </div>
+                        <div class="col s9" style="text-align: center;">
+                            <input type="text" formControlName="descp1" class="focusNext" tabindex="13">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s3" style="text-align: center;">
+                            <input type="date" formControlName="fechap2">
+                        </div>
+                        <div class="col s9" style="text-align: center;">
+                            <input type="text" formControlName="descp2" class="focusNext" tabindex="14">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s3" style="text-align: center;">
+                            <input type="date" formControlName="fechap3">
+                        </div>
+                        <div class="col s9" style="text-align: center;">
+                            <input type="text" formControlName="descp3" class="focusNext" tabindex="15">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s3" style="text-align: center;">
+                            <input type="date" formControlName="fechap4">
+                        </div>
+                        <div class="col s9" style="text-align: center;">
+                            <input type="text" formControlName="descp4" class="focusNext" tabindex="16">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s3" style="text-align: center;">
+                            <input type="date" formControlName="fechap5">
+                        </div>
+                        <div class="col s9" style="text-align: center;">
+                            <input type="text" formControlName="descp5" class="focusNext" tabindex="17">
+                        </div>
+                    </div><br>
+                    <div class="row">
+                        <div class="col s12">
+                            OBSERVACIONES:
+                        </div>
+                    </div>
+                    <div class="row">                        
+                        <div class="col s12">
+                            <textarea rows="4" formControlName="observa" class="focusNext" tabindex="18"></textarea>
+                        </div>
+                    </div><br>
+                    <div class="row">
+                        <div class="col s12">
+                            <table class="instr">
+                                <tr>
+                                    <th>CONDUCTO</th>
+                                    <th>Mm</th>
+                                    <th>Ref.</th>
+                                    <th>LAJ</th>
+                                    <th>TECNICA</th>
+                                    <th>LM</th>
+                                </tr>
+                                <tr>
+                                    <td>UNICO</td>
+                                    <td><input type="text" formControlName="mm1" class="focusNext" tabindex="19"></td>
+                                    <td><input type="text" formControlName="re1" class="focusNext" tabindex="20"></td>
+                                    <td><input type="text" formControlName="la1" class="focusNext" tabindex="21"></td>
+                                    <td><input type="text" formControlName="te1" class="focusNext" tabindex="22"></td>
+                                    <td><input type="text" formControlName="lm1" class="focusNext" tabindex="23"></td>
+                                </tr>
+                                <tr>
+                                    <td>VESTIBULAR</td>
+                                    <td><input type="text" formControlName="mm2" class="focusNext" tabindex="24"></td>
+                                    <td><input type="text" formControlName="re2" class="focusNext" tabindex="25"></td>
+                                    <td><input type="text" formControlName="la2" class="focusNext" tabindex="26"></td>
+                                    <td><input type="text" formControlName="te2" class="focusNext" tabindex="27"></td>
+                                    <td><input type="text" formControlName="lm2" class="focusNext" tabindex="28"></td>
+                                </tr>
+                                <tr>
+                                    <td>PALATINO</td>
+                                    <td><input type="text" formControlName="mm3" class="focusNext" tabindex="29"></td>
+                                    <td><input type="text" formControlName="re3" class="focusNext" tabindex="30"></td>
+                                    <td><input type="text" formControlName="la3" class="focusNext" tabindex="31"></td>
+                                    <td><input type="text" formControlName="te3" class="focusNext" tabindex="32"></td>
+                                    <td><input type="text" formControlName="lm3" class="focusNext" tabindex="33"></td>
+                                </tr>
+                                <tr>
+                                    <td>DISTAL</td>
+                                    <td><input type="text" formControlName="mm4" class="focusNext" tabindex="34"></td>
+                                    <td><input type="text" formControlName="re4" class="focusNext" tabindex="35"></td>
+                                    <td><input type="text" formControlName="la4" class="focusNext" tabindex="36"></td>
+                                    <td><input type="text" formControlName="te4" class="focusNext" tabindex="37"></td>
+                                    <td><input type="text" formControlName="lm4" class="focusNext" tabindex="38"></td>
+                                </tr>
+                                <tr>
+                                    <td>MESIAL</td>
+                                    <td><input type="text" formControlName="mm5" class="focusNext" tabindex="39"></td>
+                                    <td><input type="text" formControlName="re5" class="focusNext" tabindex="40"></td>
+                                    <td><input type="text" formControlName="la5" class="focusNext" tabindex="41"></td>
+                                    <td><input type="text" formControlName="te5" class="focusNext" tabindex="42"></td>
+                                    <td><input type="text" formControlName="lm5" class="focusNext" tabindex="43"></td>
+                                </tr>
+                                <tr>
+                                    <td>MESIOVEST</td>
+                                    <td><input type="text" formControlName="mm6" class="focusNext" tabindex="44"></td>
+                                    <td><input type="text" formControlName="re6" class="focusNext" tabindex="45"></td>
+                                    <td><input type="text" formControlName="la6" class="focusNext" tabindex="46"></td>
+                                    <td><input type="text" formControlName="te6" class="focusNext" tabindex="47"></td>
+                                    <td><input type="text" formControlName="lm6" class="focusNext" tabindex="48"></td>
+                                </tr>
+                                <tr>
+                                    <td>MESIOLING</td>
+                                    <td><input type="text" formControlName="mm7" class="focusNext" tabindex="49"></td>
+                                    <td><input type="text" formControlName="re7" class="focusNext" tabindex="50"></td>
+                                    <td><input type="text" formControlName="la7" class="focusNext" tabindex="51"></td>
+                                    <td><input type="text" formControlName="te7" class="focusNext" tabindex="52"></td>
+                                    <td><input type="text" formControlName="lm7" class="focusNext" tabindex="53"></td>
+                                </tr>
+                                <tr>
+                                    <td>DISTOVEST</td>
+                                    <td><input type="text" formControlName="mm8" class="focusNext" tabindex="54"></td>
+                                    <td><input type="text" formControlName="re8" class="focusNext" tabindex="55"></td>
+                                    <td><input type="text" formControlName="la8" class="focusNext" tabindex="56"></td>
+                                    <td><input type="text" formControlName="te8" class="focusNext" tabindex="57"></td>
+                                    <td><input type="text" formControlName="lm8" class="focusNext" tabindex="58"></td>
+                                </tr>
+                                <tr>
+                                    <td>DISTOLING</td>
+                                    <td><input type="text" formControlName="mm9" class="focusNext" tabindex="59"></td>
+                                    <td><input type="text" formControlName="re9" class="focusNext" tabindex="60"></td>
+                                    <td><input type="text" formControlName="la9" class="focusNext" tabindex="61"></td>
+                                    <td><input type="text" formControlName="te9" class="focusNext" tabindex="62"></td>
+                                    <td><input type="text" formControlName="lm9" class="focusNext" tabindex="63"></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="page">
+          <div class="inner">
+            <div class="section6">
+              <!-- <h3 id="sub_title">ESTADO DEL VEHÍCULO</h3><br><br> -->
+              <div class="table">
+                <div class="tr thead">
+                  <div class="td">Imagen</div>
+                  <div class="td ">Descripción</div>
+                </div>
+                <div class="tr">
+                  <div class="td">
+                    <div class="image-container" id="ci1" [ngStyle]="{'background-image': 'url('+myForm.value.img1+')'}">
+                      <input type="file" accept="image/*" name="img1" onchange="showMyImage(this)" (change)="changeListener($event)">
+                    </div>
+                  </div>
+                  <div class="td "><textarea name="img1d" rows="14" wrap="soft" tabindex="60" class="focusNext txa" formControlName="desc1"
+                      ></textarea></div>
+                </div>
+                <div class="tr">
+                  <div class="td">
+                    <div class="image-container" id="ci2" [ngStyle]="{'background-image': 'url('+myForm.value.img2+')'}">
+                      <input type="file" accept="image/*" name="img2" onchange="showMyImage(this)" (change)="changeListener($event)">
+                    </div>
+                  </div>
+                  <div class="td "><textarea name="img2d" rows="14" wrap="soft" tabindex="61" class="focusNext txa" formControlName="desc2"
+                      ></textarea></div>
+                </div>
+                <div class="tr">
+                  <div class="td">
+                    <div class="image-container" id="ci3" [ngStyle]="{'background-image': 'url('+myForm.value.img3+')'}">
+                      <input type="file" accept="image/*" name="img3" onchange="showMyImage(this)" (change)="changeListener($event)">
+                    </div>
+                  </div>
+                  <div class="td "><textarea name="img3d" rows="14" wrap="soft" tabindex="62" class="focusNext txa" formControlName="desc3"
+                      ></textarea></div>
+                </div>
+                <div class="tr">
+                  <div class="td ">
+                    <div class="image-container" id="ci4" [ngStyle]="{'background-image': 'url('+myForm.value.img4+')'}">
+                      <input type="file" accept="image/*" name="img4" onchange="showMyImage(this)" (change)="changeListener($event)">
+                    </div>
+                  </div>
+                  <div class="td  "><textarea name="img4d" rows="14" wrap="soft" tabindex="63" class="focusNext txa" formControlName="desc4"
+                      ></textarea></div>
+                </div>
+              </div>
+            </div>
+            
+    
+          </div>
+        </div>
+      </section>
+    </form>
+    <div class="no-print" id="printBtn" onclick="window.print()">
+        <img src="assets/print.svg" alt="" width="65" height="65">
+      </div>
+</div>

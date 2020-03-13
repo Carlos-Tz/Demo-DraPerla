@@ -1,1 +1,219 @@
-<p>edit-carnet works!</p>
+<app-navbar [submitSurveyData]="submitSurveyData" [myForm]="myForm" [save]="save">
+</app-navbar>
+<div class="app">
+    <form autocomplete="off" [formGroup]="myForm" (ngSubmit)="submitSurveyData()">
+    <section>
+        <div class="page">
+            <div class="inner">
+                <div class="row">
+                    <div class="col s3">
+                        <img src="assets/logo.jpeg" alt="" style="width: 100% !important;">
+                    </div>
+                    <div class="col s9 center-align">
+                        <h5>CARNET DE CITAS <br> Atención Odontológica Integral</h5>
+                        <h6>Dra. Perla Avisaac Pimienta Rodríguez</h6>
+                        <h6>UMSNH Ced. Prof. 3565669 IDAP Ced. Exp. 6442117</h6>
+                        <h6>Loma Grande #640 Col. Lomas del Valle. Tel. 2 99 71 81</h6>
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col s1">
+                        Nombre:
+                    </div>
+                    <div class="col s7">
+                        <input type="text" tabindex="0" class="focusNext" formControlName="nombre" autofocus>
+                    </div>
+                    <div class="col s1">
+                        Folio:
+                    </div>
+                    <div class="col s3">
+                        <input type="number" tabindex="1" class="focusNext" formControlName="folio">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s1">
+                        Fecha:
+                    </div>
+                    <div class="col s5">
+                        <input type="date" formControlName="fecha">
+                    </div>
+                    <div class="col s1">
+                        Email:
+                    </div>
+                    <div class="col s5">
+                        <input type="text" tabindex="2" class="focusNext" formControlName="email">
+                    </div>
+                </div><br><br>
+                <div class="row">
+                    <div class="col s1">
+                        CITA
+                    </div>
+                    <div class="col s3">
+                        FECHA
+                    </div>
+                    <div class="col s6">
+                        LABOR EJECUTADA
+                    </div>
+                    <div class="col s2">
+                        SALDO
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s1">
+                        <input type="text" formControlName="c1" tabindex="3" class="focusNext">
+                    </div>
+                    <div class="col s3">
+                        <input type="date" formControlName="f1">
+                    </div>
+                    <div class="col s6">
+                        <input type="text" formControlName="l1" tabindex="4" class="focusNext">
+                    </div>
+                    <div class="col s2">
+                        <input type="text" formControlName="s1" tabindex="5" class="focusNext">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s1">
+                        <input type="text" formControlName="c2" tabindex="6" class="focusNext">
+                    </div>
+                    <div class="col s3">
+                        <input type="date" formControlName="f2">
+                    </div>
+                    <div class="col s6">
+                        <input type="text" formControlName="l2" tabindex="7" class="focusNext">
+                    </div>
+                    <div class="col s2">
+                        <input type="text" formControlName="s2" tabindex="8" class="focusNext">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s1">
+                        <input type="text" formControlName="c3" tabindex="9" class="focusNext">
+                    </div>
+                    <div class="col s3">
+                        <input type="date" formControlName="f3">
+                    </div>
+                    <div class="col s6">
+                        <input type="text" formControlName="l3" tabindex="10" class="focusNext">
+                    </div>
+                    <div class="col s2">
+                        <input type="text" formControlName="s3" tabindex="11" class="focusNext">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s1">
+                        <input type="text" formControlName="c4" tabindex="12" class="focusNext">
+                    </div>
+                    <div class="col s3">
+                        <input type="date" formControlName="f4">
+                    </div>
+                    <div class="col s6">
+                        <input type="text" formControlName="l4" tabindex="13" class="focusNext">
+                    </div>
+                    <div class="col s2">
+                        <input type="text" formControlName="s4" tabindex="14" class="focusNext">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s1">
+                        <input type="text" formControlName="c5" tabindex="0" class="focusNext">
+                    </div>
+                    <div class="col s3">
+                        <input type="date" formControlName="f5">
+                    </div>
+                    <div class="col s6">
+                        <input type="text" formControlName="l5" tabindex="0" class="focusNext">
+                    </div>
+                    <div class="col s2">
+                        <input type="text" formControlName="s5" tabindex="0" class="focusNext">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s1">
+                        <input type="text" formControlName="c6" tabindex="15" class="focusNext">
+                    </div>
+                    <div class="col s3">
+                        <input type="date" formControlName="f6">
+                    </div>
+                    <div class="col s6">
+                        <input type="text" formControlName="l6" tabindex="16" class="focusNext">
+                    </div>
+                    <div class="col s2">
+                        <input type="text" formControlName="s6" tabindex="17" class="focusNext">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s1">
+                        <input type="text" formControlName="c7" tabindex="18" class="focusNext">
+                    </div>
+                    <div class="col s3">
+                        <input type="date" formControlName="f7">
+                    </div>
+                    <div class="col s6">
+                        <input type="text" formControlName="l7" tabindex="19" class="focusNext">
+                    </div>
+                    <div class="col s2">
+                        <input type="text" formControlName="s7" tabindex="20" class="focusNext">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s1">
+                        <input type="text" formControlName="c8" tabindex="21" class="focusNext">
+                    </div>
+                    <div class="col s3">
+                        <input type="date" formControlName="f8">
+                    </div>
+                    <div class="col s6">
+                        <input type="text" formControlName="l8" tabindex="22" class="focusNext">
+                    </div>
+                    <div class="col s2">
+                        <input type="text" formControlName="s8" tabindex="23" class="focusNext">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s1">
+                        <input type="text" formControlName="c9" tabindex="24" class="focusNext">
+                    </div>
+                    <div class="col s3">
+                        <input type="date" formControlName="f9">
+                    </div>
+                    <div class="col s6">
+                        <input type="text" formControlName="l9" tabindex="25" class="focusNext">
+                    </div>
+                    <div class="col s2">
+                        <input type="text" formControlName="s9" tabindex="26" class="focusNext">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s1">
+                        <input type="text" formControlName="c10" tabindex="27" class="focusNext">
+                    </div>
+                    <div class="col s3">
+                        <input type="date" formControlName="f10">
+                    </div>
+                    <div class="col s6">
+                        <input type="text" formControlName="l10" tabindex="28" class="focusNext">
+                    </div>
+                    <div class="col s2">
+                        <input type="text" formControlName="s10" tabindex="29" class="focusNext">
+                    </div>
+                </div><br>
+                <div class="row">
+                    <div class="col s12">
+                        OBSERVACIONES:
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12">
+                        <textarea rows="5" formControlName="obser" tabindex="30" class="focusNext"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </form>
+    <div class="no-print" id="printBtn" onclick="window.print()">
+        <img src="assets/print.svg" alt="" width="65" height="65">
+      </div>
+</div>

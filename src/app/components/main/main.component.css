@@ -1,0 +1,10 @@
+.page {
+  min-height: 5cm !important;
+  height: 5cm !important;
+}
+.input-field {
+    width: 80% !important;
+}
+.nn {
+    width: 15% !important;
+}

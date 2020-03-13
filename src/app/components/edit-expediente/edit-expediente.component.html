@@ -1,1 +1,1032 @@
-<p>edit-expediente works!</p>
+<app-navbar [submitSurveyData]="submitSurveyData" [myForm]="myForm" [save]="save">
+</app-navbar>
+<div class="app">
+    <form autocomplete="off" [formGroup]="myForm" (ngSubmit)="submitSurveyData()">
+    <section>
+        <div class="page">
+            <div class="inner">
+                <div class="row">
+                    <div class="col s3">
+                        <img src="assets/logo.jpeg" alt="" style="width: 100% !important;">
+                    </div>
+                    <div class="col s9 center-align">
+                        <h5>Atención Odontológica Integral</h5>
+                        <h6>Dra. Perla Avisaac Pimienta Rodríguez <br>
+                            UMSNH Ced. Prof. 3565669 IDAP Ced. Exp. 6442117 <br>
+                            Loma Grande #640 Col. Lomas del Valle. Tel. 2 99 71 81</h6>
+                        <h6>HISTORIA Y EXPEDIENTE CLÍNICO ODONTOLÓGICO</h6>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s3">
+                        Nombre del paciente:
+                    </div>
+                    <div class="col s6">
+                        <input type="text" formControlName="nombre" class="focusNext" tabindex="0" autofocus>
+                    </div>
+                    <div class="col s1">
+                        Folio:
+                    </div>
+                    <div class="col s2">
+                        <input type="number" formControlName="folio" class="focusNext" tabindex="1">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s1">
+                        Edad:
+                    </div>
+                    <div class="col s3">
+                        <input type="number" formControlName="edad" class="focusNext" tabindex="2">
+                    </div>
+                    <div class="col s1">
+                        Teléfono:
+                    </div>
+                    <div class="col s3">
+                        <input type="text" formControlName="tel" class="focusNext" tabindex="3">
+                    </div>
+                    <div class="col s1">
+                        Fecha:
+                    </div>
+                    <div class="col s3">
+                        <input type="date" formControlName="fecha">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s1">
+                        Sexo:
+                    </div>
+                    <div class="col s3">
+                        <input type="radio" name="sexo" value="f" formControlName="sexo"> Femenino
+                        <input type="radio" name="sexo" value="m" formControlName="sexo"> Masculino
+                    </div>
+                    <div class="col s1">
+                        Celular:
+                    </div>
+                    <div class="col s3">
+                        <input type="text" formControlName="cel" class="focusNext" tabindex="4">
+                    </div>
+                    <div class="col s1">
+                        Email:
+                    </div>
+                    <div class="col s3">
+                        <input type="text" formControlName="email" class="focusNext" tabindex="5">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s1">
+                        Dirección:
+                    </div>
+                    <div class="col s7">
+                        <input type="text" formControlName="direcc" class="focusNext" tabindex="6">
+                    </div>
+                    <div class="col s1">
+                        CP:
+                    </div>
+                    <div class="col s3">
+                        <input type="text" formControlName="cp" class="focusNext" tabindex="7">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s1">
+                        Colonia:
+                    </div>
+                    <div class="col s5">
+                        <input type="text" formControlName="colonia" class="focusNext" tabindex="8">
+                    </div>
+                    <div class="col s1">
+                        Municipio:
+                    </div>
+                    <div class="col s5">
+                        <input type="text" formControlName="munic" class="focusNext" tabindex="9">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s1">
+                        Estado:
+                    </div>
+                    <div class="col s3">
+                        <input type="text" formControlName="estado" class="focusNext" tabindex="10">
+                    </div>
+                    <div class="col s1">
+                        Escolaridad:
+                    </div>
+                    <div class="col s3">
+                        <input type="text" formControlName="escola" class="focusNext" tabindex="11">
+                    </div>
+                    <div class="col s2">
+                        Estado Civil:
+                    </div>
+                    <div class="col s2">
+                        <input type="text" formControlName="ecivil" class="focusNext" tabindex="12">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s3">
+                        Fecha de nacimiento:
+                    </div>
+                    <div class="col s3">
+                        <input type="text" formControlName="fechan" class="focusNext" tabindex="13">
+                    </div>
+                    <div class="col s1">
+                        Peso:
+                    </div>
+                    <div class="col s2">
+                        <input type="text" formControlName="peso" class="focusNext" tabindex="14">
+                    </div>
+                    <div class="col s1">
+                        Estatura:
+                    </div>
+                    <div class="col s2">
+                        <input type="text" formControlName="estatu" class="focusNext" tabindex="15">
+                    </div>
+                </div><br>
+                <div class="row">
+                    <div class="col s12">
+                        <h6>GENERAL</h6>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s6">
+                        ¿Es alergico a alguna sustancia o medicamento?
+                    </div>
+                    <div class="col s1">
+                        SI <input type="radio" name="g1" value="si" formControlName="g1">
+                    </div>
+                    <div class="col s1">
+                        NO <input type="radio" name="g1" value="no" formControlName="g1">
+                    </div>
+                    <div class="col s4">
+                        <input type="text" formControlName="g1a" class="focusNext" tabindex="16">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s6">
+                        ¿Ha sido intervenido quirurgicamente alguna vez?
+                    </div>
+                    <div class="col s1">
+                        SI <input type="radio" name="g2" value="si" formControlName="g2">
+                    </div>
+                    <div class="col s1">
+                        NO <input type="radio" name="g2" value="no" formControlName="g2">
+                    </div>
+                    <div class="col s4">
+                        <input type="text" formControlName="g2a" class="focusNext" tabindex="17">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s6">
+                        ¿Consume algún medicamento?
+                    </div>
+                    <div class="col s1">
+                        SI <input type="radio" name="g3" value="si" formControlName="g3">
+                    </div>
+                    <div class="col s1">
+                        NO <input type="radio" name="g3" value="no" formControlName="g3">
+                    </div>
+                    <div class="col s4">
+                        <input type="text" formControlName="g3a" class="focusNext" tabindex="18">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s6">
+                        ¿Padeció alguna enfermedad grave recientemente?
+                    </div>
+                    <div class="col s1">
+                        SI <input type="radio" name="g4" value="si" formControlName="g4">
+                    </div>
+                    <div class="col s1">
+                        NO <input type="radio" name="g4" value="no" formControlName="g4">
+                    </div>
+                    <div class="col s4">
+                        <input type="text" formControlName="g4a" class="focusNext" tabindex="19">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s6">
+                        ¿Presenta problema con anestecia local o general?
+                    </div>
+                    <div class="col s1">
+                        SI <input type="radio" name="g5" value="si" formControlName="g5">
+                    </div>
+                    <div class="col s1">
+                        NO <input type="radio" name="g5" value="no" formControlName="g5">
+                    </div>
+                    <div class="col s4">
+                        <input type="text" formControlName="g5a" class="focusNext" tabindex="20">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s6">
+                        ¿Esta usted embarazada?
+                    </div>
+                    <div class="col s1">
+                        SI <input type="radio" name="g6" value="si" formControlName="g6">
+                    </div>
+                    <div class="col s1">
+                        NO <input type="radio" name="g6" value="no" formControlName="g6">
+                    </div>
+                    <div class="col s4">
+                        <input type="text" formControlName="g6a" class="focusNext" tabindex="21">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s6">
+                        ¿Sangra de manera anormal en extracciones o cortaduras?
+                    </div>
+                    <div class="col s1">
+                        SI <input type="radio" name="g7" value="si" formControlName="g7">
+                    </div>
+                    <div class="col s1">
+                        NO <input type="radio" name="g7" value="no" formControlName="g7">
+                    </div>
+                    <div class="col s4">
+                        <input type="text" formControlName="g7a" class="focusNext" tabindex="22">
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col s12">
+                        <h6>HA PADECIDO LAS SIGUIENTES ENFERMEDADES</h6>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s6">
+                        Diabetes
+                    </div>
+                    <div class="col s1">
+                        SI <input type="radio" name="e1" value="si" formControlName="e1">
+                    </div>
+                    <div class="col s1">
+                        NO <input type="radio" name="e1" value="no" formControlName="e1">
+                    </div>
+                    <div class="col s4">
+                        <input type="text" formControlName="ea1" class="focusNext" tabindex="23">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s6">
+                        Hipertensión arterial
+                    </div>
+                    <div class="col s1">
+                        SI <input type="radio" name="e2" value="si" formControlName="e2">
+                    </div>
+                    <div class="col s1">
+                        NO <input type="radio" name="e2" value="no" formControlName="e2">
+                    </div>
+                    <div class="col s4">
+                        <input type="text" formControlName="ea2" class="focusNext" tabindex="24">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s6">
+                        Fiebre Reumática
+                    </div>
+                    <div class="col s1">
+                        SI <input type="radio" name="e3" value="si" formControlName="e3">
+                    </div>
+                    <div class="col s1">
+                        NO <input type="radio" name="e3" value="no" formControlName="e3">
+                    </div>
+                    <div class="col s4">
+                        <input type="text" formControlName="ea3" class="focusNext" tabindex="25">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s6">
+                        Asma Bronquial
+                    </div>
+                    <div class="col s1">
+                        SI <input type="radio" name="e4" value="si" formControlName="e4">
+                    </div>
+                    <div class="col s1">
+                        NO <input type="radio" name="e4" value="no" formControlName="e4">
+                    </div>
+                    <div class="col s4">
+                        <input type="text" formControlName="ea4" class="focusNext" tabindex="26">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s6">
+                        Mareos, desmayos o ataques
+                    </div>
+                    <div class="col s1">
+                        SI <input type="radio" name="e5" value="si" formControlName="e5">
+                    </div>
+                    <div class="col s1">
+                        NO <input type="radio" name="e5" value="no" formControlName="e5">
+                    </div>
+                    <div class="col s4">
+                        <input type="text" formControlName="ea5" class="focusNext" tabindex="27">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s6">
+                        Hepatitis
+                    </div>
+                    <div class="col s1">
+                        SI <input type="radio" name="e6" value="si" formControlName="e6">
+                    </div>
+                    <div class="col s1">
+                        NO <input type="radio" name="e6" value="no" formControlName="e6">
+                    </div>
+                    <div class="col s4">
+                        <input type="text" formControlName="ea6" class="focusNext" tabindex="28">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s6">
+                        Anemia
+                    </div>
+                    <div class="col s1">
+                        SI <input type="radio" name="e7" value="si" formControlName="e7">
+                    </div>
+                    <div class="col s1">
+                        NO <input type="radio" name="e7" value="no" formControlName="e7">
+                    </div>
+                    <div class="col s4">
+                        <input type="text" formControlName="ea7" class="focusNext" tabindex="29">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s6">
+                        VIH S.I.D.A
+                    </div>
+                    <div class="col s1">
+                        SI <input type="radio" name="e8" value="si" formControlName="e8">
+                    </div>
+                    <div class="col s1">
+                        NO <input type="radio" name="e8" value="no" formControlName="e8">
+                    </div>
+                    <div class="col s4">
+                        <input type="text" formControlName="ea8" class="focusNext" tabindex="30">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s6">
+                        Presión arterial Baja
+                    </div>
+                    <div class="col s1">
+                        SI <input type="radio" name="e9" value="si" formControlName="e9">
+                    </div>
+                    <div class="col s1">
+                        NO <input type="radio" name="e9" value="no" formControlName="e9">
+                    </div>
+                    <div class="col s4">
+                        <input type="text" formControlName="ea9" class="focusNext" tabindex="31">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s6">
+                        Otras
+                    </div>
+                    <div class="col s1">
+                        SI <input type="radio" name="e10" value="si" formControlName="e10">
+                    </div>
+                    <div class="col s1">
+                        NO <input type="radio" name="e10" value="no" formControlName="e10">
+                    </div>
+                    <div class="col s4">
+                        <input type="text" formControlName="ea10" class="focusNext" tabindex="32">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="page">
+            <div class="inner">
+                <div class="row">
+                    <div class="col s12">
+                        <h6>HISOTRIA BUCAL Y DENTAL</h6>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s6">
+                        ¿Molestia o dolor enla boca?
+                    </div>
+                    <div class="col s1">
+                        SI <input type="radio" name="h1" value="si" formControlName="h1">
+                    </div>
+                    <div class="col s1">
+                        NO <input type="radio" name="h1" value="no" formControlName="h1">
+                    </div>
+                    <div class="col s4">
+                        <input type="text" formControlName="h1a" class="focusNext" tabindex="33">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s6">
+                        ¿Mal olor o mal sabor en la boca?
+                    </div>
+                    <div class="col s1">
+                        SI <input type="radio" name="h2" value="si" formControlName="h2">
+                    </div>
+                    <div class="col s1">
+                        NO <input type="radio" name="h2" value="no" formControlName="h2">
+                    </div>
+                    <div class="col s4">
+                        <input type="text" formControlName="h2a" class="focusNext" tabindex="34">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s6">
+                        ¿Le sangran las encías?
+                    </div>
+                    <div class="col s1">
+                        SI <input type="radio" name="h3" value="si" formControlName="h3">
+                    </div>
+                    <div class="col s1">
+                        NO <input type="radio" name="h3" value="no" formControlName="h3">
+                    </div>
+                    <div class="col s4">
+                        <input type="text" formControlName="h3a" class="focusNext" tabindex="35">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s6">
+                        ¿Siente sus dientes móviles?
+                    </div>
+                    <div class="col s1">
+                        SI <input type="radio" name="h4" value="si" formControlName="h4">
+                    </div>
+                    <div class="col s1">
+                        NO <input type="radio" name="h4" value="no" formControlName="h4">
+                    </div>
+                    <div class="col s4">
+                        <input type="text" formControlName="h4a" class="focusNext" tabindex="36">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s6">
+                        ¿Malos hábitos Orofacilaes? (morder uñas, lápices. etc)
+                    </div>
+                    <div class="col s1">
+                        SI <input type="radio" name="h5" value="si" formControlName="h5">
+                    </div>
+                    <div class="col s1">
+                        NO <input type="radio" name="h5" value="no" formControlName="h5">
+                    </div>
+                    <div class="col s4">
+                        <input type="text" formControlName="h5a" class="focusNext" tabindex="37">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s3">
+                        Fecha de última visita dental:
+                    </div>
+                    <div class="col s9">
+                        <input type="text" formControlName="fultima" class="focusNext" tabindex="38">
+                    </div>
+                    <div class="col s3">
+                        Tratamiento adquirido:
+                    </div>
+                    <div class="col s9">
+                        <input type="text" formControlName="trataa" class="focusNext" tabindex="39">
+                    </div>
+                    <div class="col s8">
+                        ¿Utiliza otro aditamento dental aparte den cepillo de dientes para su limpieza bucal?:
+                    </div>
+                    <div class="col s4">
+                        <input type="text" formControlName="aditame" class="focusNext" tabindex="40">
+                    </div>
+                    <div class="col s4">
+                        ¿Cuantas veces al día cepilla sus dientes?:
+                    </div>
+                    <div class="col s8">
+                        <input type="text" formControlName="vcepill" class="focusNext" tabindex="41">
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col s12">
+                        <h6>ODONTOGRAMA</h6>
+                    </div>
+                </div><br>
+                <div class="row">
+                    <div class="col s12">
+                        <img src="assets/odontograma.png" alt="" style="width: 100%;">
+                        <input type="text" class="odonto focusNext" style="top: -308px; margin-left: 1mm;" formControlName="od1" tabindex="42">
+                        <input type="text" class="odonto focusNext" style="top: -308px;" formControlName="od2" tabindex="43">
+                        <input type="text" class="odonto focusNext" style="top: -308px;" formControlName="od3" tabindex="44">
+                        <input type="text" class="odonto focusNext" style="top: -308px;" formControlName="od4" tabindex="45">
+                        <input type="text" class="odonto focusNext" style="top: -308px;" formControlName="od5" tabindex="46">
+                        <input type="text" class="odonto focusNext" style="top: -308px;" formControlName="od6" tabindex="47">
+                        <input type="text" class="odonto focusNext" style="top: -308px;" formControlName="od7" tabindex="48">
+                        <input type="text" class="odonto focusNext" style="top: -308px;" formControlName="od8" tabindex="49">
+                        <input type="text" class="odonto focusNext" style="top: -308px;" formControlName="od9" tabindex="50">
+                        <input type="text" class="odonto focusNext" style="top: -308px;" formControlName="od10" tabindex="51">
+                        <input type="text" class="odonto focusNext" style="top: -308px;" formControlName="od11" tabindex="52">
+                        <input type="text" class="odonto focusNext" style="top: -308px;" formControlName="od12" tabindex="53">
+                        <input type="text" class="odonto focusNext" style="top: -308px;" formControlName="od13" tabindex="54">
+                        <input type="text" class="odonto focusNext" style="top: -308px;" formControlName="od14" tabindex="55">
+                        <input type="text" class="odonto focusNext" style="top: -308px;" formControlName="od15" tabindex="56">
+                        <input type="text" class="odonto focusNext" style="top: -308px;" formControlName="od16" tabindex="57">
+
+                        <input type="text" class="odonto focusNext" style="top: -237px; margin-left: 3.7cm;" formControlName="od17" tabindex="58">
+                        <input type="text" class="odonto focusNext" style="top: -237px;" formControlName="od18" tabindex="59">
+                        <input type="text" class="odonto focusNext" style="top: -237px;" formControlName="od19" tabindex="60">
+                        <input type="text" class="odonto focusNext" style="top: -237px;" formControlName="od20" tabindex="61">
+                        <input type="text" class="odonto focusNext" style="top: -237px;" formControlName="od21" tabindex="62">
+                        <input type="text" class="odonto focusNext" style="top: -237px;" formControlName="od22" tabindex="63">
+                        <input type="text" class="odonto focusNext" style="top: -237px;" formControlName="od23" tabindex="64">
+                        <input type="text" class="odonto focusNext" style="top: -237px;" formControlName="od24" tabindex="65">
+                        <input type="text" class="odonto focusNext" style="top: -237px;" formControlName="od25" tabindex="66">
+                        <input type="text" class="odonto focusNext" style="top: -237px; margin-right: 3.5cm;" formControlName="od26" tabindex="67">
+
+                        <input type="text" class="odonto focusNext" style="top: -167px; margin-left: 3.7cm;" formControlName="od27" tabindex="68">
+                        <input type="text" class="odonto focusNext" style="top: -167px;" formControlName="od28" tabindex="69">
+                        <input type="text" class="odonto focusNext" style="top: -167px;" formControlName="od29" tabindex="70">
+                        <input type="text" class="odonto focusNext" style="top: -167px;" formControlName="od30" tabindex="71">
+                        <input type="text" class="odonto focusNext" style="top: -167px;" formControlName="od31" tabindex="72">
+                        <input type="text" class="odonto focusNext" style="top: -167px;" formControlName="od32" tabindex="73">
+                        <input type="text" class="odonto focusNext" style="top: -167px;" formControlName="od33" tabindex="74">
+                        <input type="text" class="odonto focusNext" style="top: -167px;" formControlName="od34" tabindex="75">
+                        <input type="text" class="odonto focusNext" style="top: -167px;" formControlName="od35" tabindex="76">
+                        <input type="text" class="odonto focusNext" style="top: -167px; margin-right: 3.5cm;" formControlName="od36" tabindex="77">
+
+                        <input type="text" class="odonto focusNext" style="top: -97px; margin-left: 1mm;" formControlName="od37" tabindex="78">
+                        <input type="text" class="odonto focusNext" style="top: -97px;" formControlName="od38" tabindex="79">
+                        <input type="text" class="odonto focusNext" style="top: -97px;" formControlName="od39" tabindex="80">
+                        <input type="text" class="odonto focusNext" style="top: -97px;" formControlName="od40" tabindex="81">
+                        <input type="text" class="odonto focusNext" style="top: -97px;" formControlName="od41" tabindex="82">
+                        <input type="text" class="odonto focusNext" style="top: -97px;" formControlName="od42" tabindex="83">
+                        <input type="text" class="odonto focusNext" style="top: -97px;" formControlName="od43" tabindex="84">
+                        <input type="text" class="odonto focusNext" style="top: -97px;" formControlName="od44" tabindex="85">
+                        <input type="text" class="odonto focusNext" style="top: -97px;" formControlName="od45" tabindex="86">
+                        <input type="text" class="odonto focusNext" style="top: -97px;" formControlName="od46" tabindex="87">
+                        <input type="text" class="odonto focusNext" style="top: -97px;" formControlName="od47" tabindex="88">
+                        <input type="text" class="odonto focusNext" style="top: -97px;" formControlName="od48" tabindex="89">
+                        <input type="text" class="odonto focusNext" style="top: -97px;" formControlName="od49" tabindex="90">
+                        <input type="text" class="odonto focusNext" style="top: -97px;" formControlName="od50" tabindex="91">
+                        <input type="text" class="odonto focusNext" style="top: -97px;" formControlName="od51" tabindex="92">
+                        <input type="text" class="odonto focusNext" style="top: -97px;" formControlName="od52" tabindex="93">
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="page">
+            <div class="inner">
+                <div class="row">
+                    <div class="col s12">
+                        <table>
+                            <tr>
+                                <td>
+                                    <div class="col s3">
+                                        FECHA
+                                    </div>
+                                    <div class="col s2">
+                                        DIENTE
+                                    </div>
+                                    <div class="col s2">
+                                        DIAGNÓSTICO
+                                    </div>
+                                    <div class="col s3">
+                                        TRATAMIENTO
+                                    </div>
+                                    <div class="col s2">
+                                        FIRMA
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="row">
+                                        <div class="col s3">
+                                            <input type="date" formControlName="f1">
+                                        </div>
+                                        <div class="col s2">
+                                            <input type="text" formControlName="dt1" tabindex="94" class="focusNext">
+                                        </div>
+                                        <div class="col s2">
+                                            <textarea rows="2" formControlName="dg1" tabindex="95" class="focusNext"></textarea>
+                                        </div>
+                                        <div class="col s3">
+                                            <textarea rows="2" formControlName="t1" tabindex="96" class="focusNext"></textarea>
+                                        </div>
+                                        <div class="col s2">
+                                            <div class="signaturem">
+                                                <div id="contSignm" onclick="btn_click()">
+                                                    <img src="{{myForm.value.fi1}}" id="imgSign" (load)="imgChanged($event)">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="row">
+                                        <div class="col s3">
+                                            <input type="date" formControlName="f2">
+                                        </div>
+                                        <div class="col s2">
+                                            <input type="text" formControlName="dt2" tabindex="97" class="focusNext">
+                                        </div>
+                                        <div class="col s2">
+                                            <textarea rows="2" formControlName="dg2" tabindex="98" class="focusNext"></textarea>
+                                        </div>
+                                        <div class="col s3">
+                                            <textarea rows="2" formControlName="t2" tabindex="99" class="focusNext"></textarea>
+                                        </div>
+                                        <div class="col s2">
+                                            <div class="signaturem">
+                                                <div id="contSignm" onclick="btn_click2()">
+                                                    <img src="{{myForm.value.fi2}}" id="imgSign2" (load)="imgChanged2($event)">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="row">
+                                        <div class="col s3">
+                                            <input type="date" formControlName="f3">
+                                        </div>
+                                        <div class="col s2">
+                                            <input type="text" formControlName="dt3" tabindex="100" class="focusNext">
+                                        </div>
+                                        <div class="col s2">
+                                            <textarea rows="2" formControlName="dg3" tabindex="101" class="focusNext"></textarea>
+                                        </div>
+                                        <div class="col s3">
+                                            <textarea rows="2" formControlName="t3" tabindex="102" class="focusNext"></textarea>
+                                        </div>
+                                        <div class="col s2">
+                                            <div class="signaturem">
+                                                <div id="contSignm" onclick="btn_click3()">
+                                                    <img src="{{myForm.value.fi3}}" id="imgSign3" (load)="imgChanged3($event)">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="row">
+                                        <div class="col s3">
+                                            <input type="date" formControlName="f4">
+                                        </div>
+                                        <div class="col s2">
+                                            <input type="text" formControlName="dt4" tabindex="103" class="focusNext">
+                                        </div>
+                                        <div class="col s2">
+                                            <textarea rows="2" formControlName="dg4" tabindex="104" class="focusNext"></textarea>
+                                        </div>
+                                        <div class="col s3">
+                                            <textarea rows="2" formControlName="t4" tabindex="105" class="focusNext"></textarea>
+                                        </div>
+                                        <div class="col s2">
+                                            <div class="signaturem">
+                                                <div id="contSignm" onclick="btn_click4()">
+                                                    <img src="{{myForm.value.fi4}}" id="imgSign4" (load)="imgChanged4($event)">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="row">
+                                        <div class="col s3">
+                                            <input type="date" formControlName="f5">
+                                        </div>
+                                        <div class="col s2">
+                                            <input type="text" formControlName="dt5" tabindex="106" class="focusNext">
+                                        </div>
+                                        <div class="col s2">
+                                            <textarea rows="2" formControlName="dg5" tabindex="107" class="focusNext"></textarea>
+                                        </div>
+                                        <div class="col s3">
+                                            <textarea rows="2" formControlName="t5" tabindex="108" class="focusNext"></textarea>
+                                        </div>
+                                        <div class="col s2">
+                                            <div class="signaturem">
+                                                <div id="contSignm" onclick="btn_click5()">
+                                                    <img src="{{myForm.value.fi5}}" id="imgSign5" (load)="imgChanged5($event)">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="row">
+                                        <div class="col s3">
+                                            <input type="date" formControlName="f6">
+                                        </div>
+                                        <div class="col s2">
+                                            <input type="text" formControlName="dt6" tabindex="109" class="focusNext">
+                                        </div>
+                                        <div class="col s2">
+                                            <textarea rows="2" formControlName="dg6" tabindex="110" class="focusNext"></textarea>
+                                        </div>
+                                        <div class="col s3">
+                                            <textarea rows="2" formControlName="t6" tabindex="111" class="focusNext"></textarea>
+                                        </div>
+                                        <div class="col s2">
+                                            <div class="signaturem">
+                                                <div id="contSignm" onclick="btn_click6()">
+                                                    <img src="{{myForm.value.fi6}}" id="imgSign6" (load)="imgChanged6($event)">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="row">
+                                        <div class="col s3">
+                                            <input type="date" formControlName="f7">
+                                        </div>
+                                        <div class="col s2">
+                                            <input type="text" formControlName="dt7" tabindex="112" class="focusNext">
+                                        </div>
+                                        <div class="col s2">
+                                            <textarea rows="2" formControlName="dg7" tabindex="113" class="focusNext"></textarea>
+                                        </div>
+                                        <div class="col s3">
+                                            <textarea rows="2" formControlName="t7" tabindex="114" class="focusNext"></textarea>
+                                        </div>
+                                        <div class="col s2">
+                                            <div class="signaturem">
+                                                <div id="contSignm" onclick="btn_click7()">
+                                                    <img src="{{myForm.value.fi7}}" id="imgSign7" (load)="imgChanged7($event)">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="row">
+                                        <div class="col s3">
+                                            <input type="date" formControlName="f8">
+                                        </div>
+                                        <div class="col s2">
+                                            <input type="text" formControlName="dt8" tabindex="115" class="focusNext">
+                                        </div>
+                                        <div class="col s2">
+                                            <textarea rows="2" formControlName="dg8" tabindex="116" class="focusNext"></textarea>
+                                        </div>
+                                        <div class="col s3">
+                                            <textarea rows="2" formControlName="t8" tabindex="117" class="focusNext"></textarea>
+                                        </div>
+                                        <div class="col s2">
+                                            <div class="signaturem">
+                                                <div id="contSignm" onclick="btn_click8()">
+                                                    <img src="{{myForm.value.fi8}}" id="imgSign8" (load)="imgChanged8($event)">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="row">
+                                        <div class="col s3">
+                                            <input type="date" formControlName="f9">
+                                        </div>
+                                        <div class="col s2">
+                                            <input type="text" formControlName="dt9" tabindex="118" class="focusNext">
+                                        </div>
+                                        <div class="col s2">
+                                            <textarea rows="2" formControlName="dg9" tabindex="119" class="focusNext"></textarea>
+                                        </div>
+                                        <div class="col s3">
+                                            <textarea rows="2" formControlName="t9" tabindex="120" class="focusNext"></textarea>
+                                        </div>
+                                        <div class="col s2">
+                                            <div class="signaturem">
+                                                <div id="contSignm" onclick="btn_click9()">
+                                                    <img src="{{myForm.value.fi9}}" id="imgSign9" (load)="imgChanged9($event)">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="row">
+                                        <div class="col s3">
+                                            <input type="date" formControlName="f10">
+                                        </div>
+                                        <div class="col s2">
+                                            <input type="text" formControlName="dt10" tabindex="121" class="focusNext">
+                                        </div>
+                                        <div class="col s2">
+                                            <textarea rows="2" formControlName="dg10" tabindex="122" class="focusNext"></textarea>
+                                        </div>
+                                        <div class="col s3">
+                                            <textarea rows="2" formControlName="t10" tabindex="123" class="focusNext"></textarea>
+                                        </div>
+                                        <div class="col s2">
+                                            <div class="signaturem">
+                                                <div id="contSignm" onclick="btn_click10()">
+                                                    <img src="{{myForm.value.fi10}}" id="imgSign10" (load)="imgChanged10($event)">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="row">
+                                        <div class="col s3">
+                                            <input type="date" formControlName="f11">
+                                        </div>
+                                        <div class="col s2">
+                                            <input type="text" formControlName="dt11" tabindex="124" class="focusNext">
+                                        </div>
+                                        <div class="col s2">
+                                            <textarea rows="2" formControlName="dg11" tabindex="125" class="focusNext"></textarea>
+                                        </div>
+                                        <div class="col s3">
+                                            <textarea rows="2" formControlName="t11" tabindex="126" class="focusNext"></textarea>
+                                        </div>
+                                        <div class="col s2">
+                                            <div class="signaturem">
+                                                <div id="contSignm" onclick="btn_click11()">
+                                                    <img src="{{myForm.value.fi11}}" id="imgSign11" (load)="imgChanged11($event)">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12">
+                        <h6>OBSERVACIONES:</h6>
+                        <textarea rows="4" formControlName="obser" tabindex="127" class="focusNext"></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12" style="text-align: justify;">
+                        SE ME HA EXPLICADO CON DETENIMIENTO Y DETALLE A PLENA Y ENTERA SATISFACCIÓN MÍA, TODO EL PROCESO
+                        DE MI TRATAMIENTO Y COSTO DEL MISMO ASÍ COMO LAS PROBABLES VARIANTES QUE SE PUEDAN PRESENTAR
+                        DURANTE EL TRATAMIENTO AL QUE SERÉ SOMETIDO ACEPTANDO A PLENITUD Y AUTORIZACIÓN A LOS
+                        ESPECIALISTAS PARA QUE LLEVEN A CABO TODO CUANTO FUESE NECESARIO PARA MI TRATAMIENTO.
+                        <br><br>
+                        NOTA: SE RECOMIENDA AL PACIENTE ASISTIR A SUS CITAS ASÍ COMO NOTIFICAR CAMBIOS Y FALTAS DE LAS
+                        MISMAS PARA NO INTERFERIR CON EL COSTO Y TIEMPO DE SU TRATAMIENTO
+                    </div>
+                </div>
+                <div class="footer__">
+                    <div class="row">
+                        <div class="col s5">
+                            <div class="signature">
+                                <div id="contSign" onclick="btn_click12()">
+                                    <img src="{{myForm.value.firma1}}" id="imgSign12" (load)="imgChanged12($event)">
+                                </div>
+                                <hr>
+                                <p style="font-weight: 600;">
+                                    Firma del Paciente o Representante Legal
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col s2">
+
+                        </div>
+                        <div class="col s5">
+                            <div class="signature">
+                                <div id="contSign" onclick="btn_click13()">
+                                    <img src="{{myForm.value.firma2}}" id="imgSign13" (load)="imgChanged13($event)">
+                                </div>
+                                <hr>
+                                <p style="font-weight: 600;">
+                                    Firma del Médico Tratante
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="page">
+          <div class="inner">
+            <div class="section6">
+              <h3 id="sub_title">HOJA 1</h3><br><br>
+              <div class="table">
+                <div class="tr thead">
+                  <div class="td">Imagen</div>
+                  <div class="td ">Descripción</div>
+                </div>
+                <div class="tr">
+                  <div class="td">
+                    <div class="image-container" id="ci1" [ngStyle]="{'background-image': 'url('+myForm.value.img1+')'}">
+                      <input type="file" accept="image/*" name="img1" onchange="showMyImage(this)" (change)="changeListener($event)">
+                    </div>
+                  </div>
+                  <div class="td "><textarea name="img1d" rows="14" wrap="soft" tabindex="60" class="focusNext txa" formControlName="des1"
+                      ></textarea></div>
+                </div>
+                <div class="tr">
+                  <div class="td">
+                    <div class="image-container" id="ci2" [ngStyle]="{'background-image': 'url('+myForm.value.img2+')'}">
+                      <input type="file" accept="image/*" name="img2" onchange="showMyImage(this)" (change)="changeListener($event)">
+                    </div>
+                  </div>
+                  <div class="td "><textarea name="img2d" rows="14" wrap="soft" tabindex="61" class="focusNext txa" formControlName="des2"
+                      ></textarea></div>
+                </div>
+                <div class="tr">
+                  <div class="td">
+                    <div class="image-container" id="ci3" [ngStyle]="{'background-image': 'url('+myForm.value.img3+')'}">
+                      <input type="file" accept="image/*" name="img3" onchange="showMyImage(this)" (change)="changeListener($event)">
+                    </div>
+                  </div>
+                  <div class="td "><textarea name="img3d" rows="14" wrap="soft" tabindex="62" class="focusNext txa" formControlName="des3"
+                      ></textarea></div>
+                </div>
+                <div class="tr">
+                  <div class="td ">
+                    <div class="image-container" id="ci4" [ngStyle]="{'background-image': 'url('+myForm.value.img4+')'}">
+                      <input type="file" accept="image/*" name="img4" onchange="showMyImage(this)" (change)="changeListener($event)">
+                    </div>
+                  </div>
+                  <div class="td  "><textarea name="img4d" rows="14" wrap="soft" tabindex="63" class="focusNext txa" formControlName="des4"
+                      ></textarea></div>
+                </div>
+              </div>
+            </div>
+            
+    
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="page">
+          <div class="inner">
+            <div class="section6">
+              <h3 id="sub_title">HOJA 2</h3><br><br>
+              <div class="table">
+                <div class="tr thead">
+                  <div class="td">Imagen</div>
+                  <div class="td ">Descripción</div>
+                </div>
+                <div class="tr">
+                  <div class="td">
+                    <div class="image-container" id="ci1" [ngStyle]="{'background-image': 'url('+myForm.value.img5+')'}">
+                      <input type="file" accept="image/*" name="img5" onchange="showMyImage(this)" (change)="changeListener($event)">
+                    </div>
+                  </div>
+                  <div class="td "><textarea name="img5d" rows="14" wrap="soft" tabindex="60" class="focusNext txa" formControlName="des5"
+                      ></textarea></div>
+                </div>
+                <div class="tr">
+                  <div class="td">
+                    <div class="image-container" id="ci2" [ngStyle]="{'background-image': 'url('+myForm.value.img6+')'}">
+                      <input type="file" accept="image/*" name="img6" onchange="showMyImage(this)" (change)="changeListener($event)">
+                    </div>
+                  </div>
+                  <div class="td "><textarea name="img6d" rows="14" wrap="soft" tabindex="61" class="focusNext txa" formControlName="des6"
+                      ></textarea></div>
+                </div>
+                <div class="tr">
+                  <div class="td">
+                    <div class="image-container" id="ci3" [ngStyle]="{'background-image': 'url('+myForm.value.img7+')'}">
+                      <input type="file" accept="image/*" name="img7" onchange="showMyImage(this)" (change)="changeListener($event)">
+                    </div>
+                  </div>
+                  <div class="td "><textarea name="img7d" rows="14" wrap="soft" tabindex="62" class="focusNext txa" formControlName="des7"
+                      ></textarea></div>
+                </div>
+                <div class="tr">
+                  <div class="td ">
+                    <div class="image-container" id="ci4" [ngStyle]="{'background-image': 'url('+myForm.value.img8+')'}">
+                      <input type="file" accept="image/*" name="img8" onchange="showMyImage(this)" (change)="changeListener($event)">
+                    </div>
+                  </div>
+                  <div class="td  "><textarea name="img8d" rows="14" wrap="soft" tabindex="63" class="focusNext txa" formControlName="des8"
+                      ></textarea></div>
+                </div>
+              </div>
+            </div>
+            
+    
+          </div>
+        </div>
+      </section>
+    </form>
+    <div class="no-print" id="printBtn" onclick="window.print()">
+        <img src="assets/print.svg" alt="" width="65" height="65">
+      </div>
+</div>

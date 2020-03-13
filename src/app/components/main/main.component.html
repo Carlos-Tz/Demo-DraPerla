@@ -1,1 +1,32 @@
-<p>main works!</p>
+<app-navbar [submitSurveyData]="submitSurveyData" [myForm]="myForm" [save]="save">
+</app-navbar>
+<div class="container">
+    <form [formGroup]="myForm" novalidate autocomplete="off">
+    <div class="row">
+      <div class="col s12 m6 offset-m3 center-align">
+        <div class="card">
+          <span class="card-title">Nuevo Expediente</span>
+          <div class="card-content">
+              <div class="row">
+                <div class="col s12"><h6>Nombre del paciente:</h6></div>
+                <div class="input-field inline">
+                  <input id="nombre" type="text" class="validate" #userNombre formControlName="nombre" placeholder="Nombre" style="height: 3rem !important;">
+                  <!-- <label for="nombre">Nombre</label> -->
+                </div>
+              </div>
+            <div class="row">
+                <div class="col s12"><h6>Folio:</h6></div>
+            <div class="input-field inline">
+              <input id="folio" type="number" min="0" step="1" class="validate" #userFolio formControlName="orden" placeholder="Folio" style="height: 3rem !important;">
+              <!-- <label for="folio">Folio</label> -->
+            </div>
+            </div>
+          </div>
+          <div class="card-action">
+              <img src="assets/logo.jpeg" alt="" style="width: 100% !important;">
+          </div>
+        </div>
+      </div>
+    </div>
+    </form>
+  </div>
