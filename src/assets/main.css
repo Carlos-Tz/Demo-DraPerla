@@ -42,13 +42,13 @@ canvas {
     cursor: pointer;
   }
   
-  #contSign, .signature, #contSign2, #contSign3, #contSign4, #contSign5, #contSign6, #contSign7, #contSign8, #contSign9, #contSign10, #contSign11, #contSign12, #contSign13 {
+  #contSign, .signature, #contSign2, #contSign3, #contSign4, #contSign5, #contSign6, #contSign7, #contSign8, #contSign9, #contSign10, #contSign11, #contSign12, #contSign13, #contSign14, #contSign15 {
     text-align:center; width:240px; height: 85px; cursor: pointer;
   }
   #contSignm, .signaturem {
     text-align:center; width:105px; height: 45px; cursor: pointer;
   }
-  #imgSign, #imgSign2, #imgSign3, #imgSign4, #imgSign5, #imgSign6, #imgSign7, #imgSign8, #imgSign9, #imgSign10, #imgSign11, #imgSign12, #imgSign13{
+  #imgSign, #imgSign2, #imgSign3, #imgSign4, #imgSign5, #imgSign6, #imgSign7, #imgSign8, #imgSign9, #imgSign10, #imgSign11, #imgSign12, #imgSign13, #imgSign14, #imgSign15{
     max-width: 100%;
     max-height: 100%;
   }

@@ -10,11 +10,13 @@ import { EditExpedienteComponent } from './components/edit-expediente/edit-exped
 import { EditHistoriaComponent } from './components/edit-historia/edit-historia.component';
 import { EditRecetaComponent } from './components/edit-receta/edit-receta.component';
 import { ClienteComponent } from './components/cliente/cliente.component';
+import { InicioComponent } from './components/inicio/inicio.component';
 
 
 const routes: Routes = [
   {path: '', redirectTo: '/', pathMatch: 'full'},
-  {path: '', component: MainComponent},
+  {path: '', component: InicioComponent},
+  {path: 'main', component: MainComponent},
   {path: 'panel', component: PanelComponent, canActivate: [AuthGuard]},
   {path: 'cliente/:key', component: ClienteComponent, canActivate: [AuthGuard]},
   {path: 'edit-carnet/:key', component: EditCarnetComponent, canActivate: [AuthGuard]},

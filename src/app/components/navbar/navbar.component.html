@@ -1,10 +1,16 @@
 <nav class="menu_ no-print">
     <div class="nav-wrapper_">
-      <a [routerLink]="['/']" class="brand-logo_">
+      <a [routerLink]="['/']" class="brand-logo_ desk">
         <svg class="svg-logo_">
           <text class="text_" x="50%" y="50%" alignment-baseline="middle" text-anchor="middle">
-            <!-- <tspan class="tspan_" alignment-baseline="middle" text-anchor="middle">di</tspan>docu -->
             Dra. Perla
+          </text>
+        </svg>
+      </a>
+      <a [routerLink]="['/']" class="brand-logo_ movil">
+        <svg class="svg-logo_">
+          <text class="text_" x="50%" y="50%" alignment-baseline="middle" text-anchor="middle">
+            Dra
           </text>
         </svg>
       </a>
@@ -18,6 +24,7 @@
         </li> -->
         <li *ngIf="save==1 || save==2"><a class="a" (click)='authService.SignOut()'>Salir</a></li>
         <li><a class="a" [routerLink]="['/panel']">Panel</a></li>
+        <li><a class="a" [routerLink]="['/main']">Nuevo</a></li>
         <li *ngIf="save==0">
           <!-- <button class="nav-save-btn_ btn waves-effect waves-light" (click)="submitSurveyData()" onclick="btn_clear()" [disabled]="!myForm.valid"> -->
           <button class="nav-save-btn_ btn waves-effect waves-light" (click)="submitSurveyData()" [disabled]="!myForm.valid" [routerLink]="['/panel']">

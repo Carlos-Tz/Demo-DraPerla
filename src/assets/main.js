@@ -37,6 +37,12 @@ var canvas12 = document.getElementById('canvas12');
 var modal13 = document.getElementById('myModal13');
 var span13 = document.getElementById('close13');
 var canvas13 = document.getElementById('canvas13');
+var modal14 = document.getElementById('myModal14');
+var span14 = document.getElementById('close14');
+var canvas14 = document.getElementById('canvas14');
+var modal15 = document.getElementById('myModal15');
+var span15 = document.getElementById('close15');
+var canvas15 = document.getElementById('canvas15');
 
 var signaturePad = new SignaturePad(canvas, {
     backgroundColor: 'rgba(255, 255, 255, 0)',
@@ -117,6 +123,18 @@ var signaturePad13 = new SignaturePad(canvas13, {
     maxWidth: 4,
     penColor: "rgb(33, 33, 33)"
 });
+var signaturePad14 = new SignaturePad(canvas14, {
+    backgroundColor: 'rgba(255, 255, 255, 0)',
+    minWidth: 3,
+    maxWidth: 4,
+    penColor: "rgb(33, 33, 33)"
+});
+var signaturePad15 = new SignaturePad(canvas15, {
+    backgroundColor: 'rgba(255, 255, 255, 0)',
+    minWidth: 3,
+    maxWidth: 4,
+    penColor: "rgb(33, 33, 33)"
+});
 //btn.onclick = function () {
 function btn_click() {
     modal.style.display = "block";
@@ -169,6 +187,14 @@ function btn_click12() {
 function btn_click13() {
     modal13.style.display = "block";
     resizeCanvas13();
+}
+function btn_click14() {
+    modal14.style.display = "block";
+    resizeCanvas14();
+}
+function btn_click15() {
+    modal15.style.display = "block";
+    resizeCanvas15();
 }
 function btn_clear() {
     /* document.getElementById('imgSign').src = '';
@@ -228,6 +254,14 @@ span13.onclick = function () {
     modal13.style.display = "none";
     document.getElementById('imgSign13').src = signaturePad13.toDataURL();
 }
+span14.onclick = function () {
+    modal14.style.display = "none";
+    document.getElementById('imgSign14').src = signaturePad14.toDataURL();
+}
+span15.onclick = function () {
+    modal15.style.display = "none";
+    document.getElementById('imgSign15').src = signaturePad15.toDataURL();
+}
 window.onclick = function (event) {
     if (event.target == modal) {
         modal.style.display = "none";
@@ -280,6 +314,14 @@ window.onclick = function (event) {
     if (event.target == modal13) {
         modal13.style.display = "none";
         document.getElementById('imgSign13').src = signaturePad13.toDataURL();
+    }
+    if (event.target == modal14) {
+        modal14.style.display = "none";
+        document.getElementById('imgSign14').src = signaturePad14.toDataURL();
+    }
+    if (event.target == modal15) {
+        modal15.style.display = "none";
+        document.getElementById('imgSign15').src = signaturePad15.toDataURL();
     }
 }
 
@@ -374,6 +416,20 @@ function resizeCanvas13() {
     canvas13.height = Math.ceil(h * 0.7);
     signaturePad13.clear();
 }
+function resizeCanvas14() {
+    var w = modal14.clientWidth;
+    var h = modal14.clientHeight;
+    canvas14.width = Math.ceil(w * 0.75);
+    canvas14.height = Math.ceil(h * 0.7);
+    signaturePad14.clear();
+}
+function resizeCanvas15() {
+    var w = modal15.clientWidth;
+    var h = modal15.clientHeight;
+    canvas15.width = Math.ceil(w * 0.75);
+    canvas15.height = Math.ceil(h * 0.7);
+    signaturePad15.clear();
+}
 
 window.addEventListener("resize", resizeCanvas);
 window.addEventListener("resize", resizeCanvas2);
@@ -388,6 +444,8 @@ window.addEventListener("resize", resizeCanvas10);
 window.addEventListener("resize", resizeCanvas11);
 window.addEventListener("resize", resizeCanvas12);
 window.addEventListener("resize", resizeCanvas13);
+window.addEventListener("resize", resizeCanvas14);
+window.addEventListener("resize", resizeCanvas15);
 function showMyImage(fileInput) {
     var files = fileInput.files;
     for (var i = 0; i < files.length; i++) {

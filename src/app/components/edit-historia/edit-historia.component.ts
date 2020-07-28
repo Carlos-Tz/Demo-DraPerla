@@ -275,7 +275,7 @@ export class EditHistoriaComponent implements OnInit {
     this.readThis($event.target);
   }
 
-  readThis(inputValue: any): void {
+  /* readThis(inputValue: any): void {
     const ima = inputValue.files[0];
     this.ng2ImgMax.resizeImage(ima, 400, 400).subscribe(
       result => {
@@ -349,5 +349,86 @@ export class EditHistoriaComponent implements OnInit {
         this.toastr.error('Imagen invalida!');
       }
     );
+  } */
+
+  readThis(inputValue: any): void {
+    const ima = inputValue.files[0]; 
+    const reader = new FileReader();
+    if (ima) {
+      reader.readAsDataURL(ima);
+    }
+
+    reader.onloadend = () => {
+      const imgURL = reader.result as string;
+      const block = imgURL.split(';');
+      const contentType = block[0].split(':')[1];
+      const realData = block[1].split(',')[1];
+      this.uploadedImage = this.b64toBlob(realData, contentType);
+      if (inputValue.name === 'img1') {
+        if (this.filePathI1 !== '') {
+          const ref = this.storage.ref(this.filePathI1);
+          ref.delete();
+        }
+        this.filePathI1 = `images_ramsa/image_${Date.now()}`;
+        const fileRef = this.storage.ref(this.filePathI1);
+        this.storage.upload(this.filePathI1, this.uploadedImage).snapshotChanges().pipe(
+          finalize(() => {
+            fileRef.getDownloadURL().subscribe((url) => {
+              this.myForm.patchValue({img1: url});
+              this.toastr.success('Imagen cargada correctamente!');
+            });
+          })
+        ).subscribe();
+      }
+      if (inputValue.name === 'img2') {
+          if (this.filePathI2 !== '') {
+            const ref = this.storage.ref(this.filePathI2);
+            ref.delete();
+          }
+          this.filePathI2 = `images_ramsa/image_${Date.now()}`;
+          const fileRef = this.storage.ref(this.filePathI2);
+          this.storage.upload(this.filePathI2, this.uploadedImage).snapshotChanges().pipe(
+            finalize(() => {
+              fileRef.getDownloadURL().subscribe((url) => {
+                this.myForm.patchValue({img2: url});
+                this.toastr.success('Imagen cargada correctamente!');
+              });
+            })
+          ).subscribe();
+        }
+      if (inputValue.name === 'img3') {
+        if (this.filePathI3 !== '') {
+          const ref = this.storage.ref(this.filePathI3);
+          ref.delete();
+        }
+        this.filePathI3 = `images_ramsa/image_${Date.now()}`;
+        const fileRef = this.storage.ref(this.filePathI3);
+        this.storage.upload(this.filePathI3, this.uploadedImage).snapshotChanges().pipe(
+          finalize(() => {
+            fileRef.getDownloadURL().subscribe((url) => {
+              this.myForm.patchValue({img3: url});
+              this.toastr.success('Imagen cargada correctamente!');
+            });
+          })
+        ).subscribe();
+      }
+      if (inputValue.name === 'img4') {
+        if (this.filePathI4 !== '') {
+          const ref = this.storage.ref(this.filePathI4);
+          ref.delete();
+        }
+        this.filePathI4 = `images_ramsa/image_${Date.now()}`;
+        const fileRef = this.storage.ref(this.filePathI4);
+        this.storage.upload(this.filePathI4, this.uploadedImage).snapshotChanges().pipe(
+          finalize(() => {
+            fileRef.getDownloadURL().subscribe((url) => {
+              this.myForm.patchValue({img4: url});
+              this.toastr.success('Imagen cargada correctamente!');
+            });
+          })
+        ).subscribe();
+      }
+    };
+
   }
 }

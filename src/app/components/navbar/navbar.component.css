@@ -3,7 +3,7 @@
     height: 60px;
     display: flex;
     box-shadow: 0 1px 30px rgba(150, 150, 150, .8);
-    min-width: 21.59cm;
+    /* min-width: 21.59cm; */
     background-color: var(--page-color);
     line-height: 40px;
   }
@@ -11,7 +11,7 @@
     height: 100%;
     display: flex;
     align-items: center;
-    width: 400px;
+    /* width: 300px; */
   }
   .brand-logo_ .logo_ {height: 100%;}
   .nav-wrapper_ {
@@ -24,13 +24,13 @@
     width: 30%;
     display: flex;
     justify-content: flex-end;
-    margin-right: 2rem;
+    /* margin-right: 2rem; */
     align-items: center;/*
     height: 60%; */
   }
   .menu-items_ li {
     list-style-type: none;
-    margin-right: 2rem;
+    /* margin-right: 2rem; */
   }
   .menu-items_ li .a {
     text-decoration: none;
@@ -63,3 +63,20 @@
     fill: #a4bd39;
   }
   
+  @media screen and (max-width: 568px) {
+    .desk {
+      visibility: hidden;
+      display: none;
+    }
+    .movil {
+      width: 80px;
+    }
+  }
+  @media screen and (min-width: 569px) {
+    .movil {
+      visibility: hidden;
+    }
+    .menu-items_ {
+      margin-right: 2rem;
+    }
+  }

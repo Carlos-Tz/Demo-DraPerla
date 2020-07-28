@@ -27,6 +27,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { ClienteComponent } from './components/cliente/cliente.component';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { Ng2ImgMaxModule } from 'ng2-img-max';
+import { InicioComponent } from './components/inicio/inicio.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,8 @@ import { Ng2ImgMaxModule } from 'ng2-img-max';
     EditHistoriaComponent,
     EditExpedienteComponent,
     ExpedienteComponent,
-    ClienteComponent
+    ClienteComponent,
+    InicioComponent
   ],
   imports: [
     BrowserModule,
